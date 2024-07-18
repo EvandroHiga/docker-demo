@@ -11,8 +11,7 @@
 	<groupId>com.example</groupId>
 	<artifactId>${env.APP_NAME}</artifactId>
 	<version>${env.APP_VERSION}</version>
-	<name>demo</name>
-	<description>Demo project for Spring Boot</description>
+	<name>docker-demo</name>
 	<url/>
 	<licenses>
 		<license/>
@@ -34,14 +33,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -50,5 +47,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>

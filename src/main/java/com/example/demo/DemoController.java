@@ -6,14 +6,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/demo")
+@RequestMapping("/docker-demo")
 public class DemoController {
 
-    @Value("${demoapp.myname}")
+    @Value("${var.myname}")
     private String my_name;
+
+    @Value("${var.app.name.version}")
+    private String app_name_and_version;
 
     @GetMapping
     public String HelloWorld(){
-        return "Hello, guys! I'm the Demo Application v1.5!" + " - " + my_name;
+        return "Hello, " + my_name + "! I'm the " + app_name_and_version + " :)";
     }
 }
